@@ -1,0 +1,13 @@
+<Page ux:Class="GalleryPage">
+    <Router ux:Dependency="router"/>
+    <JavaScript File="HomePage.js"/>
+    <PageControl>
+        <Each Items="{hikes}">
+            <DockPanel>
+                <hikr.Button Dock="Bottom" Text="{name}">
+                </hikr.Button>
+                <Image File="{img}" StretchMode="Fill"/>
+            </DockPanel>
+        </Each>
+    </PageControl>
+</Page>

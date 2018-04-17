@@ -1,0 +1,17 @@
+<Page ux:Class="SplashPage">
+    <Router ux:Dependency="router"/>
+    <JavaScript File="SplashPage.js"/>
+    <DockPanel>
+        <Video Layer="Background" File="../assets/vid.mp4" StretchMode="UniformToFill" AutoPlay="true" IsLooping="true">
+            <Blur Radius="4.75"/>
+        </Video>
+        <Grid RowCount="2">
+            <StackPanel Orientation="Vertical">
+                <hikr.Text Value="appawesome" Alignment="HorizontalCenter" FontSize="40"/>
+                <hikr.Text Value="Check Out The Best" Alignment="HorizontalCenter" Opacity=".5" />
+            </StackPanel>
+            <hikr.Button Text="Get Started" FontSize="18" Margin="50,0" Alignment="VerticalCenter" Clicked="{goHome}"/>
+        </Grid>
+        <hikr.Text Dock="Bottom" Value="AppAwesome By Jesse Dirisu Bayo" Alignment="HorizontalCenter" Opacity=".5" FontSize="10"/>
+    </DockPanel>
+</Page>
