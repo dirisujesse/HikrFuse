@@ -1,0 +1,36 @@
+<Page ux:Class="EditHikePage">
+    <Image Layer="Background" File="{hike.img}" StretchMode="Fill" Opacity=".7"/>
+    <Router ux:Dependency="router" />
+    <JavaScript File="EditHikePage.js"/>
+    <DockPanel>
+        <ScrollView>
+            <StackPanel ItemSpacing="10" Padding="10">
+                <!-- <NativeViewHost>
+                    <MapView Latitude="59.911567" Longitude="10.741030" Zoom="10">
+                        <MapMarker Latitude="59.911567" Longitude="10.741030" Label="Fuse HQ"/>
+                    </MapView>
+                </NativeViewHost> -->
+                <StackPanel Orientation="Vertical">
+                    <FormLabel Value="Name"/>
+                    <hikr.Input Value="{name}" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <FormLabel Value="Distance (km)"/>
+                    <hikr.Input InputHint="Decimal" Value="{distance}" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <FormLabel Value="Rating ({rating})"/>
+                    <Slider Value="{rating}" Maximum="5" Minimum="0"/>
+                </StackPanel>
+                <hikr.TextBox Text="Comments" Value="{comments}" />
+            </StackPanel>
+        </ScrollView>
+        <Grid ColumnCount="2" Dock="Bottom">
+            <hikr.Button Clicked="{save}" Text="Save"/>
+            <hikr.Button Clicked="{cancel}" Text="Cancel"/>
+        </Grid>
+    </DockPanel>
+</Page>
+<!--<TextBox InputHint="Integer">
+    {rating}
+</TextBox>-->

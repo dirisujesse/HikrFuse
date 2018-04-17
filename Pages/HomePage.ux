@@ -1,0 +1,24 @@
+<Page ux:Class="HomePage">
+    <Image Layer="Background" File="../Assets/04.jpg" StretchMode="Fill" Opacity=".7"/>
+    <Router ux:Dependency="router" />
+    <JavaScript File="HomePage.js"/>
+    <DockPanel>
+        <hikr.Text FontSize="30" Dock="Top" TextAlignment="Center" Margin="2">
+            APPAWESOME
+        </hikr.Text>
+        <ScrollView>
+            <StackPanel Orientation="Vertical" ItemSpacing="10">
+                <Each Items="{hikes}">
+                    <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goToHike}">
+                        <Text Color="#FFFFFF" Value="{name}" Margin="20"/>
+                        <WhilePressed>
+                            <Scale Factor=".95" Duration="0.08" Easing="QuadraticOut"  />
+                        </WhilePressed>
+                    </Panel>
+                    <Rectangle Height="1" Fill="#FFF4"/>
+                </Each>
+            </StackPanel>
+        </ScrollView>
+        <hikr.Button Dock="Bottom" Text="Gallery" Clicked="{goToSwipePage}"/>
+    </DockPanel>
+</Page>

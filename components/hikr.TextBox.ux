@@ -1,0 +1,8 @@
+<StackPanel ux:Class="hikr.TextBox">
+    <string ux:Property="Text" />
+    <string ux:Property="Value" />
+    <FormLabel>{ReadProperty Text}</FormLabel>
+    <TextView TextColor="White" CaretColor="White" Padding="5" TextWrapping="Wrap" Value="{ReadProperty Value}">
+        <Rectangle Layer="Background" Color="#fff2" CornerRadius="4" />
+    </TextView>
+</StackPanel>
